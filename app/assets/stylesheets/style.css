@@ -230,7 +230,7 @@ span.menu{
 	width: 64px;
 	height: 64px;
 	display: inline-block;
-	background: url(../images/icons.png) no-repeat -8px 0px;
+	background: url(icons.png) no-repeat -8px 0px;
 	vertical-align: middle;
 }
 .grid-icon span.icons1{
@@ -315,7 +315,7 @@ span.menu{
 	width:64px;
 	height:64px;
 	display:inline-block;
-	background:url(../images/link.png) no-repeat 0px 0px;
+	background:url(link.png) no-repeat 0px 0px;
 }
 .portfoliogrids-caption{
 	background:#c1061b;
@@ -504,7 +504,7 @@ a.team-btn:hover{
 	width:8px;
 	height:8px;
 	display:inline-block;
-	background:url(../images/arrow.png) no-repeat 0px 0px;
+	background:url(arrow.png) no-repeat 0px 0px;
 	margin-right:0.5em;
 }
 .site-map ul li a:hover{
@@ -616,7 +616,7 @@ a.team-btn:hover{
 	width:8px;
 	height:8px;
 	display:inline-block;
-	background:url(../images/arrow.png) no-repeat 0px 0px;
+	background:url(arrow.png) no-repeat 0px 0px;
 	margin-right:0.5em;
 }
 .about-left h2{
@@ -759,7 +759,7 @@ ul.pagenation li a:hover{
 	width:8px;
 	height:8px;
 	display:inline-block;
-	background:url(../images/arrow.png) no-repeat 0px 0px;
+	background:url(arrow.png) no-repeat 0px 0px;
 	margin-right:0.4em;
 }
 .services-right h3{
@@ -982,7 +982,7 @@ a.home-btn:hover {
 		top: -37px;
 	}
 	span.menu:before{
-		content:url(../images/nav-icon.png) no-repeat 0px 0px;
+		content:url(nav-icon.png) no-repeat 0px 0px;
 		cursor:pointer;
 	}
 	.top-nav ul{
@@ -1077,7 +1077,7 @@ a.home-btn:hover {
 		top: -37px;
 	}
 	span.menu:before{
-		content:url(../images/nav-icon.png) no-repeat 0px 0px;
+		content:url(nav-icon.png) no-repeat 0px 0px;
 		cursor:pointer;
 	}
 	.top-nav ul{
@@ -1196,7 +1196,7 @@ a.home-btn:hover {
 		top: -37px;
 	}
 	span.menu:before{
-		content:url(../images/nav-icon.png) no-repeat 0px 0px;
+		content:url(nav-icon.png) no-repeat 0px 0px;
 		cursor:pointer;
 	}
 	.top-nav ul{
@@ -1391,7 +1391,7 @@ a.home-btn:hover {
 		top: -37px;
 	}
 	span.menu:before{
-		content:url(../images/nav-icon.png) no-repeat 0px 0px;
+		content:url(nav-icon.png) no-repeat 0px 0px;
 		cursor:pointer;
 	}
 	.top-nav ul{
