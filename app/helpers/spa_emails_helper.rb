@@ -1,0 +1,2 @@
+module SpaEmailsHelper
+end
