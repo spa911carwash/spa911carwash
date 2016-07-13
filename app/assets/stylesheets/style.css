@@ -803,7 +803,6 @@ ul.pagenation li a:hover{
 }
 a.home-btn{
 	border: 2px solid #0b0b0d;
-	text-transform: uppercase;
 	padding: 0.7em 1.5em;
 	margin-top: 0.4em;
 	display: inline-block;
