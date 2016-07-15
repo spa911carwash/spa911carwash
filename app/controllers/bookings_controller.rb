@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
       SpaMailer.confirmation(@order.id).deliver_now
       redirect_to service_booking_path(@service.name,@order.id)
   	else
-  		render action: :new
+  		render :new
   	end
   end
 
