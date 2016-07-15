@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
   def create
 		@order = @service.bookings.build(permited_params)
   	if @order.save
+      SpaMailer.confirmation(@order.id).deliver_now
       redirect_to service_booking_path(@service.name,@order.id)
   	else
   		render action: :new
