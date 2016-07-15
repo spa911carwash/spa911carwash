@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spanineoneone</title>
+  <title>Spa911 For Car</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
@@ -16,7 +16,10 @@
 </head>
 <body>
 <%= render partial: "layouts/header" %>
-<%= yield %>
+<%= flash_messages %>
+<div class="container">
+	<%= yield %>
+</div>
 <%= render partial: "layouts/footer" %>
 
 </body>

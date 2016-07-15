@@ -1,0 +1,10 @@
+.form-width {
+	width: 35%;
+	margin: 2%;
+
+	@media {		
+		width: 98% !important;
+		margin: 2% !important;		
+	}
+}
+

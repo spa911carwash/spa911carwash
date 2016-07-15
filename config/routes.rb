@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  
-
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get 'welcome/index'
-  resources :services
+
+  resources :services do
+    resources :bookings
+  end
+
   resources :spa_emails do
     collection do
       post :contact_us

@@ -1,0 +1,21 @@
+<div class="services-left-grids">	
+	<div class= "col-md-4 services-left-grid">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				Booking For: <%= @service.name.humanize %>
+			</div>
+			<div class="panel-body">
+				<%= simple_form_for @order, url: service_bookings_path(@service.name) do |f| %>
+				  <%= f.input :name, as: :string %>
+				  <%= f.input :contact_number, as: :string %>
+				  <%= f.input :email, as: :string %>
+				  <%= f.input :address, as: :text %>
+				  <%= f.input :landmark, as: :string %>
+				  <%= f.input :date, as: :date, start_year: Date.today.year, start_month: Date.today.month, start_day: Date.today.day %>
+				  <%= f.input :time, as: :string %>
+				  <%= f.button :submit, "Book", class: "btn-success" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
