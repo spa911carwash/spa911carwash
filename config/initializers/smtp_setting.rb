@@ -4,8 +4,7 @@ ActionMailer::Base.smtp_settings = {
   :domain => 'http://spa911.herokuapp.com/',
   :user_name => "spa911forcar@gmail.com",
   :password => "spa911forcar123",
-  :authentication => :plain,
-  :enable_starttls_auto => true
+  :authentication => :plain
 }
 
 ActionMailer::Base.default_url_options[:host] = "localhost:3000"
