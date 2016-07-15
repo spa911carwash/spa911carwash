@@ -5,8 +5,8 @@ ActionMailer::Base.smtp_settings = {
   :user_name => "spa911forcar@gmail.com",
   :password => "spa911forcar123",
   :authentication => :plain,
-  ssl: true,
-  enable_starttls_auto: true
+  :ssl => true,
+  :enable_starttls_auto => true
 }
 
 ActionMailer::Base.default_url_options[:host] = "localhost:3000"
