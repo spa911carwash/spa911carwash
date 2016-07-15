@@ -1,7 +1,10 @@
 class SpaMailer < ApplicationMailer
 
 	def contact_us(customer = {})
-		mail(to: "spa911forcar@gmail.com" , subject: customer[:subject]) if customer[:email].present?
+		
+		if customer[:email].present?
+			mail(to: "spa911forcar@gmail.com" , subject: customer[:subject]) 
+		end
 	end
 
 	def confirmation(order_id)
