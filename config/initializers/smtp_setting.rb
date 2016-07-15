@@ -4,7 +4,7 @@ ActionMailer::Base.smtp_settings = {
   :domain               => "gmail.com",
   :user_name            => "spa911forcar@gmail.com",
   :password             => "spa911forcar@123",
-  :authentication       => "plain",
+  :authentication       => "login",
   :enable_starttls_auto => true
 }
 
