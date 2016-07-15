@@ -18,4 +18,12 @@
 			</div>
 		</div>
 	</div>
+
+	<div class= "col-md-7 services-left-grid row" style="margin-left:6%;">
+		<ul class="list-group">
+		<% @car_list.each do |car| %>
+			<li class="list-group-itemc col-xs-6"> <%= car.name %></li>
+		<% end %>
+		</ul>
+	</div>
 </div>

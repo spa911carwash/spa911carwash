@@ -32,6 +32,12 @@ class BookingsController < ApplicationController
 
   def get_service
     @service = Service.find_by_name(params[:service_id])
-    redirect_to services_path, :flash => { :error => "Sorry! unable to find service" } unless @service.present?
+    if @service.present?
+      car = Service.where(name: @service.name.split('-').last).first
+      @car_list = car.car_list
+    else
+      redirect_to services_path, :flash => { :error => "Sorry! unable to find service" }
+    end
+     
   end
 end
