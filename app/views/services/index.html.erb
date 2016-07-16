@@ -1,86 +1,112 @@
-<!-- Services -->
-<div class="services">
-	<div class="services-grids">
-		<div class="col-md-12 services-center">
-			<h1>Our services</h1>
-			<div class="services-left-grids">
-				<div class="col-md-3 services-left-grid" style="margin-left: 5%;">
-					<div class="panel panel-info">
-						<div class="panel-heading silver-bck-color">
-							<h3>Silver Spa</h3>
-						</div>
-						<ul>
-							<li class="glyphicon glyphicon-ok">Eco-friendly Exterior Body Wash</li>
-							<li class="glyphicon glyphicon-ok">Foot mats cleaning </li>
-							<li class="glyphicon glyphicon-ok">Interior dashboard clean </li>
-							<li class="glyphicon glyphicon-ok">Tyre Dressing </li>
-							<li class="glyphicon glyphicon-ok">Windshield cleaning </li>
-							<li class="glyphicon glyphicon-ok">Side and Vent glass cleaning </li>							
-						</ul>							
-					</div>
-					<h3>Book Now</h3>
-					<%= link_to "Hatchback ₹249", new_service_booking_path('silver-hatchback'), class: "home-btn silver-bck-color" %><br>
-					<%= link_to "Sedan ₹299",new_service_booking_path('silver-sedan'), class: "home-btn silver-bck-color" %><br>
-					<%= link_to "SUV ₹349",new_service_booking_path('silver-suv'), class: "home-btn silver-bck-color" %>
-				</div>
-				<div class="col-md-3 services-left-grid"  style="margin-left: 5%;">
-					<div class="panel panel-info">
-						<div class="panel-heading gold-bck-color">
-							<h3>Gold Spa</h3>
-						</div>
-						<ul>
-							<li class="glyphicon glyphicon-ok"> Eco-friendly Exterior Body Wash </li>
-							<li class="glyphicon glyphicon-ok"> Exterior Polish / Waxing  </li>
-							<li class="glyphicon glyphicon-ok"> Foot mats cleaning
-							<li class="glyphicon glyphicon-ok"> Carpet vacuuming </li>
-							<li class="glyphicon glyphicon-ok"> Interior dashboard clean </li>
-							<li class="glyphicon glyphicon-ok"> Dashboard Polishing </li>
-							<li class="glyphicon glyphicon-ok"> Side door panel Cleaning </li>
-							<li class="glyphicon glyphicon-ok"> Tyre Dressing </li>
-							<li class="glyphicon glyphicon-ok"> Windshield cleaning </li>
-							<li class="glyphicon glyphicon-ok"> Side mirror cleaning </li>
-							<li class="glyphicon glyphicon-ok"> Side and Vent glass cleaning </li>
-						</ul>
-					</div>
-					<h3>Book Now</h3>
-					<%= link_to "Hatchback ₹499",new_service_booking_path('gold-hatchback'), class: "home-btn gold-bck-color" %><br>
-					<%= link_to "Sedan ₹649",new_service_booking_path('gold-sedan'), class: "home-btn gold-bck-color" %><br>
-					<%= link_to "SUV ₹799",new_service_booking_path('gold-suv'), class: "home-btn gold-bck-color" %>
-				</div>
-				<div class="col-md-3 services-left-grid"  style="margin-left: 5%;">
-					<div class="panel panel-info">
-						<div class="panel-heading platinum-bck-color">
-							<h3>Platinum Spa</h3>
-						</div>
-						<ul>
-							<li class="glyphicon glyphicon-ok"> Eco-friendly Exterior Body Wash </li>
-							<li class="glyphicon glyphicon-ok"> Exterior Polish / Waxing </li>
-							<li class="glyphicon glyphicon-ok"> Minor Scratch romover from exterior </li>
-							<li class="glyphicon glyphicon-ok"> Battery Terminal Coating </li>
-							<li class="glyphicon glyphicon-ok"> Strain Removal of Seats  </li>
-							<li class="glyphicon glyphicon-ok"> Strain Removal of roof </li>
-							<li class="glyphicon glyphicon-ok"> Foot mats cleaning </li>
-							<li class="glyphicon glyphicon-ok"> Complete vacuuming of Interiors </li>
-							<li class="glyphicon glyphicon-ok"> Interior dashboard clean & shine </li>
-							<li class="glyphicon glyphicon-ok"> Dashboard Polishing </li>
-							<li class="glyphicon glyphicon-ok"> Side door panel Cleaning </li>
-							<li class="glyphicon glyphicon-ok"> Tyre cleaning & Tyre polishing </li>
-							<li class="glyphicon glyphicon-ok"> Windshield cleaning  </li>
-							<li class="glyphicon glyphicon-ok"> Side mirror cleaning  </li>
-							<li class="glyphicon glyphicon-ok"> Side and Vent glass cleaning </li>
-							<li class="glyphicon glyphicon-ok"> Cleaning of Hinges & side doors </li>
-							<li class="glyphicon glyphicon-ok"> Complete body paint protection by a polymer based sealant </li>
-							<li class="glyphicon glyphicon-ok"> All vinyl, plastic rubber deep cleaned & protected including dash & doors. </li>
-						</ul>
-					</div>
-					<h3>Book Now</h3>
-					<%= link_to "Hatchback ₹999",new_service_booking_path('platinum-hatchback'), class: "home-btn platinum-bck-color" %><br>
-					<%= link_to "Sedan ₹1249",new_service_booking_path('platinum-sedan'), class: "home-btn platinum-bck-color" %><br>
-					<%= link_to "SUV ₹1599",new_service_booking_path('platinum-suv'), class: "home-btn platinum-bck-color" %>
-				</div>
-			</div>		
-			<div class="clearfix"> </div>
+<aside id="fh5co-hero" clsas="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+	   	<li style="background-image: url(assets/slide_2.jpg);">
+	   		<div class="overlay-gradient"></div>
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   				<div class="slider-text-inner">
+	   					<h2>Our Services</h2>
+	   					
+	   				</div>
+	   			</div>
+	   		</div>
+	   	</li>
+  	</ul>
+	</div>
+</aside>
+
+<div class="fh5co-services">
+	<div class="container" id="nav-services">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+				<h2>Our pleasure to serve you</h2>
+				<p>     Eco-friendly Exterior Body Wash Foot mats cleaning Interior dashboard clean Tyre Dressing Windshield cleaning Side and Vent glass cleaning  </p>
+			</div>
+			<div class="col-md-4 text-left item-block animate-box">
+				<span class="icon">
+					<%= image_tag "icon-car2.png",class: "img-responsive" %>					
+				</span>
+				<h3>Silver Spa</h3>
+				<ul>
+					<li>Eco-friendly Exterior Body Wash </li>
+					<li>Foot mats cleaning </li>
+					<li>Interior dashboard clean </li>
+					<li>Tyre Dressing </li>
+					<li>Windshield cleaning </li>
+					<li>Side and Vent glass cleaning  </li>
+					
+				</ul>
+				<%= link_to "Hatchback ₹249", "#{new_service_booking_path('silver-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "Sedan ₹299", "#{new_service_booking_path('silver-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "SUV ₹349", "#{new_service_booking_path('silver-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+			</div>
+
+			<div class="col-md-4 text-left item-block animate-box">
+				<span class="icon">
+					<%= image_tag "icon-car3.png",class: "img-responsive" %>					
+				</span>
+				<h3>Gold Spa</h3>
+				<ul>
+					<li> Eco-friendly Exterior Body Wash </li>
+					<li> Exterior Polish / Waxing </li>
+					<li> Foot mats cleaning </li>
+					<li> Carpet vacuuming </li>
+					<li> Interior dashboard clean </li>
+					<li> Dashboard Polishing </li>
+					<li> Side door panel Cleaning </li>
+					<li> Tyre Dressing </li>
+					<li> Windshield cleaning </li>
+					<li> Side mirror cleaning </li>
+					<li> Side and Vent glass cleaning </li>
+					
+				</ul>
+				<%= link_to "Hatchback ₹499", "#{new_service_booking_path('gold-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "Sedan ₹649", "#{new_service_booking_path('gold-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "SUV ₹799", "#{new_service_booking_path('gold-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+			</div>
+
+			<div class="col-md-4 text-left item-block animate-box">
+				<span class="icon">
+					<%= image_tag "icon-car4.jpg",class: "img-responsive" %>					
+				</span>
+				<h3>Platinum Spa</h3>
+				<ul>
+					<li> Eco-friendly Exterior Body Wash </li>
+					<li> Exterior Polish / Waxing </li>
+					<li> Minor Scratch romover from exterior </li>
+					<li> Battery Terminal Coating </li>
+					<li> Strain Removal of Seats </li>
+					<li> Strain Removal of roof </li>
+					<li> Foot mats cleaning </li>
+					<li> Complete vacuuming of Interiors </li>
+					<li> Interior dashboard clean & shine </li>
+					<li> Dashboard Polishing </li>
+					<li> Side door panel Cleaning </li>
+					<li> Tyre cleaning & Tyre polishing </li>
+					<li> Windshield cleaning </li>
+					<li> Side mirror cleaning </li>
+					<li> Side and Vent glass cleaning </li>
+					<li> Cleaning of Hinges & side doors </li>
+					<li> Complete body paint protection by a polymer based sealant </li>
+					<li> All vinyl, plastic rubber deep cleaned & protected including dash & doors. </li>
+					
+				</ul>
+				<%= link_to "Hatchback ₹999", "#{new_service_booking_path('platinum-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "Sedan ₹1249", "#{new_service_booking_path('platinum-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "SUV ₹1599", "#{new_service_booking_path('platinum-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+			</div>
+
 		</div>
-	</div>	
+	</div>
 </div>
-<!-- Services -->
+
+<div class="fh5co-cta" style="background-image: url(images/image_3.jpg);">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="col-md-12 text-center animate-box">
+			<h3>We Try To Update The Site Everyday</h3>
+			<p><a href="#" class="btn btn-primary btn-outline with-arrow">Get started now! <i class="icon-arrow-right"></i></a></p>
+		</div>
+	</div>
+</div>

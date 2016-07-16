@@ -1,133 +1,140 @@
-<!-- banner -->
-<div class="benner">
-<!-- slider -->
-<!--- img-slider --->
-<div class="img-slider">
-	<!----start-slider-script-->
- <script>
-    // You can also use "$(window).load(function() {"
-        $(function () {
-          // Slideshow 4
-          $("#slider4").responsiveSlides({
-            auto: true,
-            pager: true,
-            nav: true,
-            speed: 1500,
-            namespace: "callbacks",
-            before: function () {
-              $('.events').append("<li>before event fired.</li>");
-            },
-            after: function () {
-              $('.events').append("<li>after event fired.</li>");
-            }
-          });
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+	   	<li style="background-image: url(assets/slide_1.jpg);">
+	   		<div class="overlay-gradient"></div>
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   				<div class="slider-text-inner">
+	   					<h2>The Eco Car Wash</h2>
+	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
+	   				</div>
+	   			</div>
+	   		</div>
+	   	</li>
+	   	<li style="background-image: url(assets/slide_3.jpg);">
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   				<div class="slider-text-inner">
+	   					<h2>The DoorStep Car Wash</h2>
+	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
+	   				</div>
+	   			</div>
+	   		</div>
+	   	</li>
+	   	<li style="background-image: url(assets/slide_2.jpg);">
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   				<div class="slider-text-inner">
+	   					<h2>The Water less Car Wash</h2>
+	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
+	   				</div>
+	   			</div>
+	   		</div>
+	   	</li>
+	   	<li style="background-image: url(assets/slide4.jpg);">
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   				<div class="slider-text-inner">
+	   					<h2>The Pocket-Friendly Car Wash</h2>
+	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
+	   				</div>
+	   			</div>
+	   		</div>
+	   	</li>
+  	</ul>
+	</div>
+</aside>
 
-        });
-  </script>
-<!----//End-slider-script---->
-<!-- Slideshow 4 -->
-    <div  id="top" class="callbacks_container">
-      <ul class="rslides" id="slider4">
-        <li>
-        	<%= image_tag("slide1.jpg")%>
-          <div class="slider-caption">
-          	<h1>the<span style="color: green;"> Eco Car</span> Wash</h1>
-         	 <p> <b style="background: rgb(12, 25, 44) none repeat scroll 0px 0px;"> Don't waste water, don't waste fuel, don't waste energy, don't waste time.. Call us & get a complete shiny & convenient car wash </b> </p>
-          </div>
-        </li>
-        <li>
-        	<%= image_tag("slide2.jpg")%>
-           <div class="slider-caption">
-          	<h1>
-          		<span style="color: green;">the</span>
-          		<span style="color: red;"> DoorStep</span>
-          		<span style="color: green;"> Car Wash</span>
-        		</h1>
-          	<p> <b style="background: rgb(12, 25, 44) none repeat scroll 0px 0px;">Tired of waiting for your own car at the washing centre?? Don't waste time! Call us, get your car washed, Whenever Wherever!! </b></p>
-          </div>
-        </li>
-        <li>
-        	<%= image_tag("slide3.jpg")%>
-           <div class="slider-caption">
-           	<h1>the<span style="color: green;"> Water less</span> Car Wash</h1>
-           <p> <b style="background: rgb(12, 25, 44) none repeat scroll 0px 0px;">Ever left a half filled bottle inside your car..Don't waste water!! Give it to us! Just 550ml will give you a shiny car wash </b></p>
-          </div>
-        </li>
-        <li>
-        	<%= image_tag("slide4.jpg")%>
-           <div class="slider-caption">
-           	<h1>the<span style="color: green;"> Pocket-Friendly</span> Car Wash</h1>
-           <p> <b style="background: rgb(12, 25, 44) none repeat scroll 0px 0px;">Love your car.. we are customer friendly!! Love your money.. we are pocket friendly!! </b></p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="clearfix"> </div>
-</div>
-	<!-- slider -->
-<!-- banner -->
-<div class="top-grids">
+
+<div id="fh5co-why-us" class="animate-box">
 	<div class="container">
-		<div class="top-grids-head text-center">
-			<h2>Why us?</h2>
-			<p>Born with the sole motto of delivering and delighting our customers with finest car wash services</p>
-		</div>
-		<div class="services-left-grids" style='text-align: center;'>
-			<div class="col-md-4 services-left-grid">
-				<p><%= link_to image_tag("eco-world-leaf.jpg"), services_path %> </p>
-				<h4> We are Ecofriendly </h4>
-				<p>Don't waste water, don't waste fuel, don't waste energy, don't waste time.. Call us & get a complete shiny & convenient car wash, Ever left a half filled bottle inside your car..Don't waste water!! Give it to us! Just 550ml will give you a shiny car wash</p>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+				<h2>Why Choose Us</h2>
+				<p>Born with the sole motto of delivering and delighting our customers with finest car wash services. </p>
+			</div>
+			<div class="col-md-4 text-center item-block">
+				<span class="icon">
+					<%= image_tag "eco-world-leaf.jpg",class: "img-responsive" %>					
+				</span>
+				<h3>We are Ecofriendly</h3>
+				<p>Don't waste water, don't waste fuel, don't waste energy, don't waste time.. Call us & get a complete shiny & convenient car wash, Ever left a half filled bottle inside your car..Don't waste water!! Give it to us! Just 550ml will give you a shiny car wash.</p>
 				
 			</div>
-			<div class="col-md-4 services-left-grid" style='text-align: center;'>
-				<p><%= link_to image_tag("doorstep.png"), services_path%></p>
-				<h4> Doorstep facility </h4>
+			<div class="col-md-4 text-center item-block">
+				<span class="icon">
+					<%= image_tag "doorstep.png",class: "img-responsive" %>					
+				</span>
+
+				<h3>Doorstep facility</h3>
 				<p>Tired of waiting for your own car at the washing centre?? Don't waste time! Call us, get your car washed, Whenever Wherever!!</p>
 				
 			</div>
-			<div class="col-md-4 services-left-grid" style='text-align: center;'>
-				<p><%= link_to image_tag("pocket-friendly.png"), services_path%></p>
-				<h4> Pocket Friendly </h4>
-				<p>Love your car.. we are customer friendly!! Love your money.. we are pocket friendly!! </p>
+			<div class="col-md-4 text-center item-block">
+				<span class="icon">
+					<%= image_tag "pocket-friendly.png",class: "img-responsive" %>	
+				</span>
+				<h3>Pocket Friendly</h3>
+				<p>Love your car.. we are customer friendly!! Love your money.. we are pocket friendly!!</p>
 				
 			</div>
-		</div>		
-		<div class="clearfix"> </div>
-	</div>
-</div>
-<!-- top-grids -->
-<div class="top-grids">
-	<div class="container">
-		<div class="top-grids-head text-center">
-			<h2>Our Services</h2>
-			<p>We care about our customer needs and we care for mother nature</p>
 		</div>
-		<div class="services-left-grids" style='text-align: center;'>
-			<div class="col-md-4 services-left-grid">
-				<p><%= link_to image_tag("icon-car2.png"), services_path %> </p>
-				<h4> Silver Spa </h4>
-				<p>Eco-friendly Exterior Body Wash, Interior dashboard clean, Tyre Dressing,
-				Windshield cleaning, and more!</p>
-				<%= link_to "Book Now",services_path, class: "home-btn" %>
-			</div>
-			<div class="col-md-4 services-left-grid" style='text-align: center;'>
-				<p><%= link_to image_tag("icon-car3.png"), services_path%></p>
-				<h4> Gold Spa </h4>
-				<p>Includes Silver Spa,Exterior Polish / Waxing, Carpet vacuuming, dashboard Polishing, and more!</p>
-				<%= link_to "Book Now",services_path, class: "home-btn" %>
-			</div>
-			<div class="col-md-4 services-left-grid" style='text-align: center;'>
-				<p><%= link_to image_tag("icon-car4.jpg"), services_path%></p>
-				<h4> Platinum Spa </h4>
-				<p>Includes Gold Spa, Minor Scratch romover from exterior, Battery Terminal Coating,Strain Removal of Seats & Roof, Complete body paint protection by a polymer based sealant, and more! </p>
-				<%= link_to "Book Now",services_path, class: "home-btn" %>
-			</div>
-		</div>		
-		<div class="clearfix"> </div>
 	</div>
 </div>
 
+<div class="fh5co-section-with-image">
+	<%= image_tag "image_1.jpg",class: "img-responsive" %>
+	<div class="fh5co-box animate-box">
+		<h2>Forward Thinking</h2>
+		<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+		<p><a href="#" class="btn btn-primary btn-outline with-arrow">Get started <i class="icon-arrow-right"></i></a></p>
+	</div>	
+</div>
 
+<div id="fh5co-testimonial" class="animate-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+				<h2>Our Services</h2>
+				<p>We care about our customer needs and we care for mother nature. </p>
+			</div>
+			
+			<div class="col-md-4 text-center item-block">
+				<%= image_tag "icon-car2.png",class: "img-responsive custom-img-center" %>
+				<h3> Silver Spa </h3>
+				<blockquote>
+					<p>&ldquo; Eco-friendly Exterior Body Wash, Interior dashboard clean, Tyre Dressing, Windshield cleaning, and more! &rdquo;</p>
+					<%= link_to "Book", "#{services_path()}#nav-services", class: "btn btn-primary btn-lg" %>
+				</blockquote>
+				
+			</div>
+			<div class="col-md-4 text-center item-block">
+				<%= image_tag "icon-car3.png",class: "img-responsive custom-img-center" %>
+				<h3> Gold Spa </h3>
+				<blockquote>
+					<p>&ldquo; Includes Silver Spa,Exterior Polish / Waxing, Carpet vacuuming, dashboard Polishing, and more! &rdquo;</p>
+					<%= link_to "Book", "#{services_path()}#nav-services", class: "btn btn-primary btn-lg" %>
+				</blockquote>
+			</div>
+			<div class="col-md-4 text-center item-block">
+				<%= image_tag "icon-car4.jpg",class: "img-responsive custom-img-center" %>
+				<h3> Platinum Spa </h3>
+				<blockquote>
+					<p>&ldquo; Includes Gold Spa, Minor Scratch romover from exterior, Battery Terminal Coating,Strain Removal of Seats & Roof, Complete body paint protection by a polymer based sealant, and more! &rdquo;</p>
+					<%= link_to "Book", "#{services_path()}#nav-services", class: "btn btn-primary btn-lg" %>
+				</blockquote>
+			</div>
+		</div>
 	</div>
 </div>
-<!-- /team -->
+
+<div class="fh5co-cta" style="background-image: url(images/image_3.jpg);">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="col-md-12 text-center animate-box">
+			<h3>We Try To Update The Site Everyday</h3>
+			<p><a href="#" class="btn btn-primary btn-outline with-arrow">Get started now! <i class="icon-arrow-right"></i></a></p>
+		</div>
+	</div>
+</div>

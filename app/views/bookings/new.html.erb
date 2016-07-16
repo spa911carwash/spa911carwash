@@ -1,29 +1,51 @@
-<div class="services-left-grids">	
-	<div class= "col-md-4 services-left-grid">
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				Booking For: <%= @service.name.humanize %>
-			</div>
-			<div class="panel-body">
-				<%= simple_form_for @order, url: service_bookings_path(@service.name) do |f| %>
-				  <%= f.input :name, as: :string %>
-				  <%= f.input :contact_number, as: :string %>
-				  <%= f.input :email, as: :string %>
-				  <%= f.input :address, as: :text %>
-				  <%= f.input :landmark, as: :string %>
-				  <%= f.input :date, as: :date, start_year: Date.today.year, start_month: Date.today.month, start_day: Date.today.day %>
-				  <%= f.input :time, as: :string %>
-				  <%= f.button :submit, "Book", class: "btn-success" %>
-				<% end %>
+<aside id="fh5co-hero" clsas="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+	   	<li style="background-image: url(/assets/slide_5.jpg);">
+	   		<div class="overlay-gradient"></div>
+	   		<div class="container">
+	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+	   				<div class="slider-text-inner">
+	   					<h2><%= @service.name.humanize %></h2>
+	   				</div>
+	   			</div>
+	   		</div>
+	   	</li>
+  	</ul>
+	</div>
+</aside>
+<div class="fh5co-services">
+	<div class="container" id="booking-form">
+		<div class="row">
+			<div class="services-left-grids">	
+				<div class= "col-md-5 services-left-grid">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							Booking For: <%= @service.name.humanize %>
+						</div>
+						<div class="panel-body">
+							<%= simple_form_for @order, url: "#{service_bookings_path(@service.name)}#booking-form" do |f| %>
+							  <%= f.input :name, as: :string, input_html: {class: "custom-form-height"} %>
+							  <%= f.input :contact_number, as: :string, input_html: {class: "custom-form-height"} %>
+							  <%= f.input :email, as: :string, input_html: {class: "custom-form-height"} %>
+							  <%= f.input :address, as: :text %>
+							  <%= f.input :landmark, as: :string, input_html: {class: "custom-form-height"} %>
+							  <%= f.input :date, as: :date, start_year: Date.today.year, start_month: Date.today.month, start_day: Date.today.day, input_html: {class: "custom-form-width"} %>
+							  <%= f.input :time, as: :string, input_html: {class: "custom-form-height"} %>
+							  <%= f.button :submit, "Book", class: "btn-success" %>
+							<% end %>
+						</div>
+					</div>
+				</div>
+
+				<div class= "col-md-6 services-left-grid row" style="margin-left:6%;">
+					<ul class="list-group">
+					<% @car_list.each do |car| %>
+						<li class="list-group-itemc col-xs-6"> <%= car.name %></li>
+					<% end %>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class= "col-md-7 services-left-grid row" style="margin-left:6%;">
-		<ul class="list-group">
-		<% @car_list.each do |car| %>
-			<li class="list-group-itemc col-xs-6"> <%= car.name %></li>
-		<% end %>
-		</ul>
 	</div>
 </div>

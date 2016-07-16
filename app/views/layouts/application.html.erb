@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Spa911 For Car</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<head>
+	  <title>Spa911 For Car</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-	<!-- Custom Theme files -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- webfonts -->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800|Comfortaa:700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Comfortaa:700,300,400' rel='stylesheet' type='text/css'>
-	<!-- webfonts -->
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= render partial: "layouts/header" %>
-<%= flash_messages %>
-<div class="container">
-	<%= yield %>
-</div>
-<%= render partial: "layouts/footer" %>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Bold &mdash; Free HTML5 Bootstrap Website Template by FreeHTML5.co</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+		<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+		<meta name="author" content="FreeHTML5.co" />
 
-</body>
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
+		<!-- webfonts -->
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="fh5co-page">
+			<%= render partial: "layouts/header" %>
+			<%= flash_messages %>
+			<%= yield %>
+			<%= render partial: "layouts/footer" %>
+		</div>
+	</body>
 </html>

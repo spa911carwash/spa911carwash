@@ -1,33 +1,16 @@
-<div class="header">
+<header id="fh5co-header" role="banner">
 	<div class="container">
-		<!-- logo -->
-		<div class="logo">
-			<%= link_to image_tag("logo.png"), "#" %>
+		<div class="header-inner">
+			<h1><a href="#">Spa911<span>.</span></a></h1>
+			<nav role="navigation">
+				<ul>
+					<li <%= make_active_to('home') %>><%= link_to "Home", root_path %></li>
+					<li <%= make_active_to('aboutus')%>><%= link_to "About", about_us_path %></li>
+					<li <%= make_active_to('services')%>><%= link_to "Services", services_path %></li>
+					<li <%= make_active_to('contactus')%>><%= link_to "Contact", contact_us_path %></li>
+					
+				</ul>
+			</nav>
 		</div>
-		<!-- /logo -->
-		<!-- top-nav -->
-		<div class="top-nav">
-			<span class="menu"> </span>
-			<ul>
-				<li <%= make_active_to('home') %>><%= link_to "Home", root_path %></li>
-				<li <%= make_active_to('aboutus')%>><%= link_to "About", about_us_path %></li>
-				<li <%= make_active_to('services')%>><%= link_to "Services", services_path %></li>
-				<li <%= make_active_to('contactus')%>><%= link_to "Contact", contact_us_path %></li>
-				<div class="clearfix"> </div>
-			</ul>
-		</div>
-
-		<!-- script-for-nav -->
-		<script>
-			$(document).ready(function(){
-				$("span.menu").click(function(){
-					$(".top-nav ul").slideToggle(1000);
-				});
-			});
-		</script>
-		<!-- script-for-nav -->
-		<!-- /top-nav -->
-		<div class="clearfix"> </div>
 	</div>
-	<!-- /header -->
-</div>
+</header>
