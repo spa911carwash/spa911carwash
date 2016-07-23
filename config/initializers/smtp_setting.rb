@@ -1,9 +1,11 @@
 ActionMailer::Base.smtp_settings = {
 	:address => "smtp.gmail.com",
   :port => 587,
-  :domain => 'spa911.herokuapp.com',
-  :user_name => "spa911forcar@gmail.com",
-  :password => "spa911forcar123",
+  :domain => 'spa911carwash.in',
+  #:user_name => "spa911forcar@gmail.com",
+  #:password => "spa911forcar123",
+  :user_name => "spa911carwash@gmail.com",
+  :password => "spa911carwash123",
   :authentication => :plain,
   :enable_starttls_auto => true
 }

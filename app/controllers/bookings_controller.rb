@@ -10,13 +10,12 @@ class BookingsController < ApplicationController
   end
 
   def show
-
+    @booking = Booking.includes(:service).find(params[:id])
   end
 
   def create
 		@order = @service.bookings.build(permited_params)
   	if @order.save
-      SpaMailer.confirmation(@order.id).deliver_now
       redirect_to service_booking_path(@service.name,@order.id)
   	else
   		render :new
@@ -27,7 +26,7 @@ class BookingsController < ApplicationController
   private
 
   def permited_params
-  	params.require(:booking).permit(:name,:contact_number,:email,:address,:landmark,:date)
+  	params.require(:booking).permit(:name,:contact_number,:email,:address,:landmark,:date,:first_half,:second_half,:third_half)
   end
 
   def get_service

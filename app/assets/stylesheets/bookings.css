@@ -1,7 +1,4 @@
-.custom-form-height {
-	height: 38px !important; 
-}
-
-.custom-form-width {
-	height: 42px !important;
+.custom-header-background {
+	background: black none repeat scroll 0 0;
+  opacity: 0.77;
 }

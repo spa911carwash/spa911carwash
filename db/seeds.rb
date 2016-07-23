@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Service.delete_all
-[["gold-hatchback",499], ["gold-sedan",649],["gold-suv",799],["silver-hatchback",249], ["silver-sedan",299],["silver-suv",349],["platinum-hatchback",999], ["platinum-sedan",1249],["platinum-suv",1599]].each do |service|
+[["gold-spa-hatchback",499], ["gold-spa-sedan",649],["gold-spa-suv",799],["silver-spa-hatchback",249], ["silver-spa-sedan",299],["silver-spa-suv",349],["platinum-spa-hatchback",999], ["platinum-spa-sedan",1249],["platinum-spa-suv",1599]].each do |service|
 	Service.create(name: service.first, price:service.last )
 end
 

@@ -3,13 +3,13 @@ class SpaMailer < ApplicationMailer
 	def contact_us(customer = {})
 		
 		if customer[:email].present?
-			mail(to: "spa911forcar@gmail.com" , subject: customer[:subject]) 
+			mail(to: "spa911carwash@gmail.com" , subject: customer[:subject]) 
 		end
 	end
 
 	def confirmation(order_id)
-		@order = Booking.find(order_id)
-		mail(to: @order.email , subject: "Booking Received")
+		@booking = Booking.find(order_id)
+		mail(to: @booking.email,bcc: "spa911carwash@gmail.com" , subject: "Booking Received")
 	end
 
 end

@@ -6,7 +6,7 @@
 	   		<div class="container">
 	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 	   				<div class="slider-text-inner">
-	   					<h2><%= @service.name.humanize %></h2>
+	   					<h2><%= @service.name.gsub('-', ' ').capitalize %></h2>
 	   				</div>
 	   			</div>
 	   		</div>
@@ -21,7 +21,7 @@
 				<div class= "col-md-5 services-left-grid">
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							Booking For: <%= @service.name.humanize %>
+							Booking For: <%= @service.name.gsub('-', ' ').capitalize %>
 						</div>
 						<div class="panel-body">
 							<%= simple_form_for @order, url: "#{service_bookings_path(@service.name)}#booking-form" do |f| %>
@@ -31,7 +31,9 @@
 							  <%= f.input :address, as: :text %>
 							  <%= f.input :landmark, as: :string, input_html: {class: "custom-form-height"} %>
 							  <%= f.input :date, as: :date, start_year: Date.today.year, start_month: Date.today.month, start_day: Date.today.day, input_html: {class: "custom-form-width"} %>
-							  <%= f.input :time, as: :string, input_html: {class: "custom-form-height"} %>
+							  <%= f.input :first_half, label: Booking::FIRST_HALF %>
+							  <%= f.input :second_half, label: Booking::SECOND_HALF %>
+							  <%= f.input :third_half, label: Booking::THIRD_HALF %>
 							  <%= f.button :submit, "Book", class: "btn-success" %>
 							<% end %>
 						</div>
