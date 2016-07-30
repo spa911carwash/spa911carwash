@@ -3,6 +3,8 @@ class SpaMailer < ApplicationMailer
 	def contact_us(customer = {})
 		
 		if customer[:email].present?
+			@message = customer[:message]
+			@name = customer[:name]
 			mail(to: "spa911carwash@gmail.com" , subject: customer[:subject]) 
 		end
 	end

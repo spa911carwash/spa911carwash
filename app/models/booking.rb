@@ -6,6 +6,8 @@ class Booking < ActiveRecord::Base
 
 	validates :name, :contact_number,:email,:address,:date, presence: true
 	validates :email, format: { with: VALID_EMAIL_REGEX }
+	validates :contact_number, :numericality => {:only_integer => true}
+	validates_length_of :contact_number,:minimum => 10, :maximum => 10
 
 	belongs_to :service
 	after_save :send_confirmation
