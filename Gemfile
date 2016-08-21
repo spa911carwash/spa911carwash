@@ -46,3 +46,10 @@ group :development do
   gem 'spring'
 end
 
+gem 'activeadmin', '~> 1.0.0.pre4'
+
+# Plus integrations with:
+gem 'devise'
+gem 'cancan' # or cancancan
+gem 'draper'
+gem 'pundit'
