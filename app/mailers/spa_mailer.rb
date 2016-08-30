@@ -5,6 +5,7 @@ class SpaMailer < ApplicationMailer
 		if customer[:email].present?
 			@message = customer[:message]
 			@name = customer[:name]
+			@email = customer[:email]
 			mail(to: "spa911carwash@gmail.com" , subject: customer[:subject]) 
 		end
 	end
