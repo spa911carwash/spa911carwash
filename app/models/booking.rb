@@ -1,5 +1,7 @@
 class Booking < ActiveRecord::Base
 
+	attr_accessor :send_mail
+
 	FIRST_HALF = "9am to 12pm"
 	SECOND_HALF = "12pm to 15pm"
 	THIRD_HALF = "15pm to 18pm"
@@ -26,6 +28,12 @@ class Booking < ActiveRecord::Base
 	end
 
 	def send_confirmation
-		SpaMailer.confirmation(self.id).deliver_now
+		if self.send_mail.present? && self.send_mail == true
+			SpaMailer.confirmation(self.id).deliver_now
+		end
+	end
+
+	def price
+		self.service.present? ? self.service.price : 0
 	end
 end

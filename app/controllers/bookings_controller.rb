@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
 
   def create
 		@order = @service.bookings.build(permited_params)
+    @order.send_mail = true
   	if @order.save
       redirect_to service_booking_path(@service.name,@order.id)
   	else

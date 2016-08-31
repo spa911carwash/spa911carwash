@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821162916) do
+ActiveRecord::Schema.define(version: 20160831191608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20160821162916) do
     t.boolean  "first_half"
     t.boolean  "second_half"
     t.boolean  "third_half"
+    t.integer  "actual_price"
   end
 
   create_table "car_lists", force: :cascade do |t|
