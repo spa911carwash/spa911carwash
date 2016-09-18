@@ -27,6 +27,8 @@ module ApplicationHelper
 			klass = 'class=active'
 		elsif tab == 'services' && params[:controller] == 'services'
 			klass = 'class=active'
+		elsif tab == 'packages' && params[:controller] == 'packages'
+			klass = 'class=active'
 		end		
 		klass
 	end

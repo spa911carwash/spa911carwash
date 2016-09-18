@@ -6,9 +6,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :services do
-    resources :bookings
+    resources :bookings do
+      collection do
+        get :check_for_empty_slots
+      end
+    end
   end
 
+  resources :packages
   resources :spa_emails do
     collection do
       post :contact_us

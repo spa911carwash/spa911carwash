@@ -1,0 +1,39 @@
+<% if @allowed_timeslots[:first_half] %>
+	<% if @time && @time >= 12 %>
+		alert("<%= @time %>")
+		$('#booking_first_half').attr("disabled", "disabled");
+	<% else %>
+		if($('#booking_first_half').is('[disabled]')) {
+			$('#booking_first_half').removeAttr("disabled");
+			$('#booking_first_half').removeClass("disabled");
+		}
+	<% end %>
+<% else %>
+	$('#booking_first_half').attr("disabled", "disabled");
+<% end %>
+
+<% if @allowed_timeslots[:second_half] %>
+	<% if @time && @time >= 15 %>
+		$('#booking_second_half').attr("disabled", "disabled");
+	<% else %>
+		if($('#booking_second_half').is('[disabled]')) {
+			$('#booking_second_half').removeAttr("disabled");
+			$('#booking_second_half').removeClass("disabled");
+		}
+	<% end %>
+<% else %>
+	$('#booking_second_half').attr("disabled", "disabled");
+<% end %>
+
+<% if @allowed_timeslots[:third_half] %>
+	<% if @time && @time >= 18 %>
+		$('#booking_third_half').attr("disabled", "disabled");
+	<% else %>
+		if($('#booking_third_half').is('[disabled]')) {
+			$('#booking_third_half').removeAttr("disabled");
+			$('#booking_third_half').removeClass("disabled");
+		}
+	<% end %>
+<% else %>
+	$('#booking_third_half').attr("disabled", "disabled");
+<% end %>

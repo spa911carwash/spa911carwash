@@ -1,6 +1,6 @@
 ActiveAdmin.register Booking do
 	
-	permit_params :name,:contact_number,:email,:address,:landmark,:date,:first_half,:second_half,:third_half,:actual_price
+	permit_params :name,:contact_number,:email,:address,:landmark,:date,:first_half,:second_half,:third_half,:actual_price, :service_id, :team_id, :remarks
 
 	# See permitted parameters documentation:
 	# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -16,6 +16,7 @@ ActiveAdmin.register Booking do
 	# end
 
 	index do
+	  column :service_name
 	  column :name
 	  column :contact_number
 	  column :price
@@ -26,5 +27,20 @@ ActiveAdmin.register Booking do
       #link_to 'Delete', admin_booking_path(booking), :method => :delete, :confirm => "Are you sure"
     end
 	end 
+
+	csv do
+    column :service_name
+    column :name
+	  column :contact_number
+	  column :email
+	  column :address
+	  column :date
+	  column :first_half
+	  column :second_half
+	  column :third_half	  
+	  column :price
+	  column :actual_price
+	  column :remarks
+  end
 
 end

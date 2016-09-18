@@ -1,0 +1,3 @@
+text = "<%= escape_javascript(render(partial: 'slots', locals: {f: @order})) %>"
+alert(text)
+$("#time-slots").html("<%= escape_javascript(render(partial: 'slots', locals: {f: @order})) %>");

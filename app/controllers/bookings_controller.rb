@@ -6,7 +6,11 @@ class BookingsController < ApplicationController
   end
 
   def new
+    date = Date.today
   	@order = @service.bookings.build
+    @order.team_id = Team.first.id
+    @time = Time.now.hour
+    @allowed_timeslots = Booking.get_empty_slots(date)
   end
 
   def show
@@ -14,7 +18,11 @@ class BookingsController < ApplicationController
   end
 
   def create
+    
 		@order = @service.bookings.build(permited_params)
+    date = @order.date.present? ? @order.date : Date.today
+    @time = Time.now.hour if Date.today == date
+    @allowed_timeslots = Booking.get_empty_slots(date)
     @order.send_mail = true
   	if @order.save
       redirect_to service_booking_path(@service.name,@order.id)
@@ -23,11 +31,17 @@ class BookingsController < ApplicationController
   	end
   end
 
+  def check_for_empty_slots
+    date = params[:date].to_date
+    @time = Time.now.hour if Date.today == date
+    @allowed_timeslots = Booking.get_empty_slots(date)
+  end
+
 
   private
 
   def permited_params
-  	params.require(:booking).permit(:name,:contact_number,:email,:address,:landmark,:date,:first_half,:second_half,:third_half)
+  	params.require(:booking).permit(:name,:contact_number,:email,:address,:landmark,:date,:first_half,:second_half,:third_half, :team_id)
   end
 
   def get_service

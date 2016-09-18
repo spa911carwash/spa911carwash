@@ -30,10 +30,34 @@
 							  <%= f.input :email, as: :string, input_html: {class: "custom-form-height"} %>
 							  <%= f.input :address, as: :text %>
 							  <%= f.input :landmark, as: :string, input_html: {class: "custom-form-height"} %>
-							  <%= f.input :date, as: :date, start_year: Date.today.year, start_month: Date.today.month, start_day: Date.today.day, input_html: {class: "custom-form-width"} %>
-							  <%= f.input :first_half, label: Booking::FIRST_HALF %>
-							  <%= f.input :second_half, label: Booking::SECOND_HALF %>
-							  <%= f.input :third_half, label: Booking::THIRD_HALF %>
+							  <%= f.input :date, as: :date, start_year: Date.today.year, start_month: Date.today.month, start_day: Date.today.day, input_html: {class: "custom-form-width", onchange: "get_available_slots('#{check_for_empty_slots_service_bookings_path(params[:service_id])}')"} %>
+							  <div>
+							  	<% if @time.present? && @time >= 12 || @allowed_timeslots[:first_half] == false %>		
+							  		<%= f.input :first_half, label: Booking::FIRST_HALF, disabled: true %>
+							  	<% else %>
+							  		<%= f.input :first_half, label: Booking::FIRST_HALF %>
+							  	
+							  	<% end %>
+							  </div>
+							  <div>
+							  	<% if @time.present? && @time >= 15 || @allowed_timeslots[:second_half] == false %>
+							  		<%= f.input :second_half, label: Booking::SECOND_HALF, disabled: true%>		
+							  	<% else  %>
+							  		<%= f.input :second_half, label: Booking::SECOND_HALF, hint: '' %>
+							  	
+							  	<% end %>
+							  </div>
+							  <div>
+							  	<% if @time.present? && @time >= 18 || @allowed_timeslots[:third_half] == false %>
+							  		<%= f.input :third_half, label: Booking::THIRD_HALF, disabled: true %>
+							  	<% else  %>
+							  		<%= f.input :third_half, label: Booking::THIRD_HALF, hint: '' %>
+							  	
+							  	<% end %>
+							  	<div class="has-error">
+							  		<%= f.error :base %>
+						  		</div>
+							  </div>
 							  <%= f.button :submit, "Book", class: "btn-success" %>
 							<% end %>
 						</div>

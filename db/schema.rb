@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831191608) do
+ActiveRecord::Schema.define(version: 20160911195142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,11 +63,22 @@ ActiveRecord::Schema.define(version: 20160831191608) do
     t.boolean  "second_half"
     t.boolean  "third_half"
     t.integer  "actual_price"
+    t.integer  "team_id"
+    t.text     "remarks"
   end
 
   create_table "car_lists", force: :cascade do |t|
     t.string   "name"
     t.integer  "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "gender"
+    t.integer  "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -90,6 +101,12 @@ ActiveRecord::Schema.define(version: 20160831191608) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "price"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

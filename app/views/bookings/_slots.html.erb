@@ -1,0 +1,27 @@
+<div>
+	<% if @time.present? && @time >= 12 %>		
+		<%= f.input :first_half, label: Booking::FIRST_HALF, disabled: true, hint: "Sorry! #{Booking::FIRST_HALF} slot is not available for the day" %>
+	<% elsif @allowed_timeslots[:first_half] %>
+		<%= f.input :first_half, label: Booking::FIRST_HALF %>
+	<% else %>
+		<%= f.input :first_half, label: Booking::FIRST_HALF, disabled: true, hint: "Sorry! #{Booking::FIRST_HALF} slot is full for the day" %>
+	<% end %>
+</div>
+<div>
+	<% if @time.present? && @time >= 15 %>
+		<%= f.input :first_half, label: Booking::SECOND_HALF, disabled: true, hint: "Sorry! #{Booking::SECOND_HALF} slot is not available for the day" %>		
+	<% elsif @allowed_timeslots[:second_half] %>
+		<%= f.input :second_half, label: Booking::SECOND_HALF %>
+	<% else %>
+		<%= f.input :second_half, label: Booking::SECOND_HALF, disabled: true, hint: "Sorry! #{Booking::SECOND_HALF} slot is full for the day" %>
+	<% end %>
+</div>
+<div>
+	<% if @time.present? && @time >= 18 %>
+		<%= f.input :first_half, label: Booking::THIRD_HALF, disabled: true, hint: "Sorry! #{Booking::THIRD_HALF} slot is not available for the day" %>
+	<% elsif @allowed_timeslots[:third_half] %>
+		<%= f.input :third_half, label: Booking::THIRD_HALF %>
+	<% else %>
+		<%= f.input :third_half, label: Booking::THIRD_HALF, disabled: true, hint: "Sorry! #{Booking::THIRD_HALF} slot is full for the day" %>
+	<% end %>
+</div>

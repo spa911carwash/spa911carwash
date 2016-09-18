@@ -18,3 +18,4 @@
 //= require jquery.flexslider-min.js
 //= require jquery.flexslider-min.js
 //= require main.js
+//= require welcome.js
