@@ -5,7 +5,7 @@ class Booking < ActiveRecord::Base
 	FIRST_HALF = "9am to 12pm"
 	SECOND_HALF = "12pm to 15pm"
 	THIRD_HALF = "15pm to 18pm"
-	MAXIMUM_TEAMS = Team.all.count
+	MAXIMUM_TEAMS = 1 #Team.all.count
 	MAXIMUM_ALLOWED_BOOKINGS = MAXIMUM_TEAMS * 3
 
 	validates :name, :contact_number,:email,:address,:date, presence: true
