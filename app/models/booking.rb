@@ -17,7 +17,7 @@ class Booking < ActiveRecord::Base
 
 	belongs_to :service
 	belongs_to :team
-	before_save :default_time
+	#before_save :default_time
 	after_save :send_confirmation
 
 	scope :today_bookings, -> (date) { where(:date => date) }
