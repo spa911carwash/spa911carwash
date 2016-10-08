@@ -1,4 +1,4 @@
-<header id="fh5co-header" role="banner" <%= params[:controller] == 'bookings' && params[:action] == 'show' ? 'class= custom-header-background' : ''%>>
+<header id="fh5co-header" role="banner" <%= ['bookings','packages'].include?(params[:controller]) && params[:action] == 'show' ? 'class= custom-header-background' : ''%>>
 	<div class="container">
 		<div class="header-inner">
 			<h1> <%= link_to "Spa911<span>.</span>".html_safe, root_path %> </h1>

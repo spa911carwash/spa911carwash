@@ -37,8 +37,8 @@
 						1 - Gold Spa.
 					</p>
 					<p>
-						<%= link_to "HatchBack | Seadn  | SUV <br>
-						₹ 1399    | ₹ 1699 | ₹ 2199".html_safe, "#package-enquiry" %>
+						<%= link_to "HatchBack | Sedan  | SUV <br>
+						₹ 1399    | ₹ 1699 | ₹ 2199".html_safe, "#enquiry-form", onclick: "change_value('#{PackageEnquiry::ECO}','package_enquiry_package_type');" %>
 					</p>
 				</div>
 			</div>
@@ -56,8 +56,8 @@
 						1 - Gold Spa.
 					</p>
 					<p>
-						<%= link_to "HatchBack | Seadn  | SUV <br>
-						₹ 2199    | ₹ 2799 | ₹ 3499".html_safe, "#package-enquiry" %>
+						<%= link_to "HatchBack | Sedan  | SUV <br>
+						₹ 2199    | ₹ 2799 | ₹ 3499".html_safe, "#enquiry-form", onclick: "change_value('#{PackageEnquiry::MODERATE}','package_enquiry_package_type');" %>
 					</p>
 				</div>
 			</div>
@@ -76,8 +76,8 @@
 						4 - Gold Spa.
 					</p>
 					<p>
-						<%= link_to "HatchBack | Seadn  | SUV <br>
-						₹ 3399    | ₹ 4299 | ₹ 5499".html_safe, "#package-enquiry" %>
+						<%= link_to "HatchBack | Sedan  | SUV <br>
+						₹ 3399    | ₹ 4299 | ₹ 5499".html_safe, "#enquiry-form", onclick: "change_value('#{PackageEnquiry::LUXURY}','package_enquiry_package_type');" %>
 					</p>
 				</div>
 			</div>
@@ -98,13 +98,39 @@
 						6 - Platinum Spa.
 					</p>
 					<p>
-						<%= link_to "HatchBack | Seadn  | SUV <br>
-						₹ 5199    | ₹ 6499 | ₹ 8199".html_safe, "#package-enquiry" %>
+						<%= link_to "HatchBack | Sedan  | SUV <br>
+						₹ 5199    | ₹ 6499 | ₹ 8199".html_safe, "#enquiry-form", onclick: "change_value('#{PackageEnquiry::ROYAL}','package_enquiry_package_type');" %>
 					</p>
 				</div>
 			</div>
 			<div class="col-md-4 text-center item-block animate-box">
 				
+			</div>
+		</div>
+		<div class="panel panel-info" id="enquiry-form">
+	    <div class="panel-heading">Send Us Your Detail </div>
+	    <div class="panel-body">
+				<div class="row" >
+					<%= simple_form_for @package, url: "#{packages_path}#enquiry-form", class: "form-inline" do |f| %>
+						<div class="col-md-3">  
+					  	<%= f.input :package_type, :collection => PackageEnquiry::PACKAGES, class: "form-group" %>
+				  	</div>
+				  	<div class="col-md-2">
+					  	<%= f.input :name, as: :string, class: "form-group" %>
+				  	</div>
+				  	<div class="col-md-3">
+					  	<%= f.input :email, as: :string, class: "form-group" %>
+				  	</div>
+				  	<div class="col-md-2">
+					  	<%= f.input :phone_number, as: :string, class: "form-group" %>
+				  	</div>
+				  	<div class="col-md-2" style="margin-top: 3%;">
+				  		<div class="form-group">
+					  		<%= f.button :submit, "Enquiry", class: "btn-success" %>
+					  	</div>
+					  </div>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -113,8 +139,8 @@
 <div class="fh5co-cta" style="background-image: url(assets/image_3.jpg);" id="package-enquiry">
 	<div class="overlay"></div>
 	<div class="container">
-		<div class="col-md-12 text-center animate-box">
-			<h3>To Avail the above Packages Call Us on Below Numbers</h3>
+		<div class="col-md-12 text-center animate-box">			
+			<h3>To Know more about Packages Call Us on Below Numbers</h3>
 			<p><b>7768007911 / 8806097911</b></p>
 		</div>
 	</div>

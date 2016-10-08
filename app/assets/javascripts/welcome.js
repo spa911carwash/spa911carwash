@@ -17,3 +17,7 @@ function get_available_slots(url) {
 		dataType: "script"
 	});
 }
+
+function change_value(value,destination) {
+  $('#' + destination).val(value)
+};
