@@ -4,7 +4,7 @@ class CreatePackageEnquiries < ActiveRecord::Migration
       t.string :package_type
       t.string :name
       t.string :email
-      t.integer :phone_number
+      t.integer :phone_number, limit: 8
 
       t.timestamps null: false
     end
