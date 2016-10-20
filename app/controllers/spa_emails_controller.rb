@@ -6,7 +6,7 @@ class SpaEmailsController < ApplicationController
 			SpaMailer.contact_us(message).deliver_now
 			redirect_to contact_us_path, :flash => { :success => "Thanks! We recevied your feedback" } 
 		else
-			redirect_to contact_us_path
+			redirect_to contact_us_path, :flash => { :error => "Please fill all the details to contact us" } 
 		end
 	end
 
