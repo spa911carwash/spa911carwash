@@ -16,6 +16,7 @@ ActiveAdmin.register Booking do
 	# end
 
 	index do
+	  column :ist_format
 	  column :service_name
 	  column :name
 	  column :contact_number
@@ -28,18 +29,23 @@ ActiveAdmin.register Booking do
     end
 	end 
 
+	sidebar :total_collection do
+	  "Amount:  ₹#{Booking.total_collection}"
+	end
+
+
 	csv do
-    column :service_name
     column :name
 	  column :contact_number
+	  column :service_name
+	  column :price
+	  column :actual_price
 	  column :email
 	  column :address
 	  column :date
 	  column :first_half
 	  column :second_half
-	  column :third_half	  
-	  column :price
-	  column :actual_price
+	  column :third_half
 	  column :remarks
   end
 

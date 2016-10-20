@@ -22,21 +22,26 @@ class Booking < ActiveRecord::Base
 
 	scope :today_bookings, -> (date) { where(:date => date) }
 
+	class << self
+		def total_collection
+			self.pluck(:actual_price).compact.sum
+		end
 
-	def self.get_empty_slots(date)
-		maximum_teams = Team.all.count
-		total_bookings = Booking.today_bookings(date)
-		#raise total_bookings.inspect
-		first_half_bookings = total_bookings.where(first_half: true).count
-		second_half_bookings = total_bookings.where(second_half: true).count
-		third_half_bookings = total_bookings.where(third_half: true).count
-		allowed_timeslots = {
-		  first_half: (first_half_bookings < maximum_teams ) ? true : false,
-		  second_half: (second_half_bookings < maximum_teams ) ? true : false,
-		  third_half: (third_half_bookings < maximum_teams ) ? true : false
-		}
+		def get_empty_slots(date)
+			maximum_teams = Team.all.count
+			total_bookings = Booking.today_bookings(date)
+			#raise total_bookings.inspect
+			first_half_bookings = total_bookings.where(first_half: true).count
+			second_half_bookings = total_bookings.where(second_half: true).count
+			third_half_bookings = total_bookings.where(third_half: true).count
+			allowed_timeslots = {
+			  first_half: (first_half_bookings < maximum_teams ) ? true : false,
+			  second_half: (second_half_bookings < maximum_teams ) ? true : false,
+			  third_half: (third_half_bookings < maximum_teams ) ? true : false
+			}
 
-		allowed_timeslots
+			allowed_timeslots
+		end
 	end
 
 	def remaining_bookings
@@ -72,6 +77,10 @@ class Booking < ActiveRecord::Base
 
 	def price
 		self.service.present? ? self.service.price : 0
+	end
+
+	def ist_format
+		self.date.strftime('%d-%m-%y')
 	end
 
 	private
