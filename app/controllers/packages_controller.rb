@@ -10,6 +10,7 @@ class PackagesController < ApplicationController
 
 	def create
 		@package = PackageEnquiry.new(permited_params)
+		@package.send_mail = true
   	if @package.save
       redirect_to package_path(@package)
   	else

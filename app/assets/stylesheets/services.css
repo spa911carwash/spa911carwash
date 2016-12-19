@@ -1,3 +1,12 @@
 .custom-margin {
 	margin-bottom: 0px !important;
 }
+
+.custom-text-size {
+	font-size: 15px;
+}
+
+.custom-margin-0 {
+	padding-left: 0;
+  padding-right: 0;
+}

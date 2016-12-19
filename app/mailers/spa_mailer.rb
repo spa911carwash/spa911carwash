@@ -15,4 +15,9 @@ class SpaMailer < ApplicationMailer
 		mail(to: @booking.email,bcc: "spa911carwash@gmail.com" , subject: "Booking Received")
 	end
 
+	def package_enquiry(enquiry_id)
+		@package = PackageEnquiry.find(enquiry_id)
+		mail(to: "spa911carwash@gmail.com", subject: "Enquiry Received")
+	end
+
 end
