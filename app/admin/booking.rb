@@ -1,5 +1,7 @@
 ActiveAdmin.register Booking do
 	
+	config.sort_order = 'date_desc'
+
 	permit_params :name,:contact_number,:email,:address,:landmark,:date,:first_half,:second_half,:third_half,:actual_price, :service_id, :team_id, :remarks
 
 	# See permitted parameters documentation:
@@ -16,7 +18,7 @@ ActiveAdmin.register Booking do
 	# end
 
 	index do
-	  column :ist_format
+	  column :booking_date
 	  column :service_name
 	  column :name
 	  column :contact_number

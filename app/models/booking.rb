@@ -79,7 +79,7 @@ class Booking < ActiveRecord::Base
 		self.service.present? ? self.service.price : 0
 	end
 
-	def ist_format
+	def booking_date
 		self.date.strftime('%d-%m-%y')
 	end
 
