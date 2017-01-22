@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock "3.7.1"
 
-set :application, $APPLICATION_NAME
-set :repo_url, $REPO_URL
+set :application, 'Spa911carwash'
+set :repo_url, 'https://github.com/spa911carwash/spa911carwash.git'
 
 
 
@@ -15,7 +15,7 @@ set :scm_passphrase, $SCM_PASSWORD
 set :user, $DEPLOY_USER
 set :use_sudo, true
 set :deploy_via, :copy
-set :deploy_to, $DEPLOY_TO
+set :deploy_to, '/home/deploy/spa911'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
