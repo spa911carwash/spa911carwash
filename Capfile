@@ -14,6 +14,9 @@ require 'capistrano/rails'
 #ruby as rvm
 require 'capistrano/rvm'
 
+#passenger requirements
+require 'capistrano/passenger'
+
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"

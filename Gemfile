@@ -49,6 +49,7 @@ group :development do
 
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-passenger'
   gem 'capistrano-rvm'
 end
 
