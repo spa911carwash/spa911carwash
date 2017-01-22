@@ -5,7 +5,7 @@ common: &common
   pool: 5
 user_pass_host: &user_pass_host
   username: root
-  password: root
+  password: <%= ENV['DATABASE_PASSWORD'] || '' %>
   host: localhost
 
 production: &production
