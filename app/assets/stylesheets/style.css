@@ -26,7 +26,7 @@ body {
 }
 
 a {
-  color: #00B906;
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -554,12 +554,22 @@ h1, h2, h3, h4, h5, h6, figure {
   vertical-align: middle;
   min-height: 700px;
 }
+#fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
+  font-size: 70px;
+  font-weight: 400;
+  color: #fff;
+}
+
+
 #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 70px;
   font-weight: 400;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
+  #fh5co-hero .flexslider .slider-text > .slider-text-inner h1 {
+    font-size: 40px;
+  }
   #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
     font-size: 40px;
   }

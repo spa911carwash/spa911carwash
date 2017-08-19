@@ -1,3 +1,6 @@
+<% content_for :title do %>
+	<%= " - Home"%>
+<% end %>
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
@@ -6,7 +9,7 @@
 	   		<div class="container">
 	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 	   				<div class="slider-text-inner">
-	   					<h2>The Eco Car Wash</h2>
+	   					<h1>The Eco Car Wash</h1>
 	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
 	   				</div>
 	   			</div>
@@ -16,7 +19,7 @@
 	   		<div class="container">
 	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 	   				<div class="slider-text-inner">
-	   					<h2>The DoorStep Car Wash</h2>
+	   					<h1>The DoorStep Car Wash</h1>
 	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
 	   				</div>
 	   			</div>
@@ -26,7 +29,7 @@
 	   		<div class="container">
 	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 	   				<div class="slider-text-inner">
-	   					<h2>The Water less Car Wash</h2>
+	   					<h1>The Water less Car Wash</h1>
 	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
 	   				</div>
 	   			</div>
@@ -36,7 +39,7 @@
 	   		<div class="container">
 	   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 	   				<div class="slider-text-inner">
-	   					<h2>The Pocket-Friendly Car Wash</h2>
+	   					<h1>The Pocket-Friendly Car Wash</h1>
 	   					<p><%= link_to "Get Started", services_path, class: "btn btn-primary btn-lg" %></p>
 	   				</div>
 	   			</div>
@@ -51,12 +54,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-				<h2>Why Choose Us</h2>
+				<h1>Why Choose Us</h1>
 				<p>Born with the sole motto of delighting our customers with finest car wash services. </p>
 			</div>
 			<div class="col-md-4 text-center item-block">
 				<span class="icon">
-					<%= image_tag "eco-world-leaf.jpg",class: "img-responsive" %>					
+					<%= image_tag "eco-world-leaf.jpg",class: "img-responsive", alt: 'Spa911Carwash - We are Ecofriendly' %>					
 				</span>
 				<h3>We are Ecofriendly</h3>
 				<p>Don't waste water, don't waste fuel, don't waste energy and don't waste time. Ever left with a half filled bottle inside your car? Don't waste water!! Give it to us!! Just 500ml will make your car as shiny as new.</p>
@@ -64,7 +67,7 @@
 			</div>
 			<div class="col-md-4 text-center item-block">
 				<span class="icon">
-					<%= image_tag "doorstep.png",class: "img-responsive" %>					
+					<%= image_tag "doorstep.png",class: "img-responsive", alt: 'Spa911Carwash - Doorstep facility' %>					
 				</span>
 
 				<h3>Doorstep facility</h3>
@@ -73,7 +76,7 @@
 			</div>
 			<div class="col-md-4 text-center item-block">
 				<span class="icon">
-					<%= image_tag "pocket-friendly.png",class: "img-responsive" %>	
+					<%= image_tag "pocket-friendly.png",class: "img-responsive", alt: 'Spa911Carwash - Pocket Friendly' %>	
 				</span>
 				<h3>Pocket Friendly</h3>
 				<p>Love your car; We are customer friendly!! Love your money; We are pocket friendly!!</p>
@@ -84,9 +87,9 @@
 </div>
 
 <div class="fh5co-section-with-image">
-	<%= image_tag "image_1.jpg",class: "img-responsive" %>
+	<%= image_tag "image_1.jpg",class: "img-responsive", alt: 'Spa911Carwash - Forward Thinking' %>
 	<div class="fh5co-box animate-box">
-		<h2>Forward Thinking</h2>
+		<h1>Forward Thinking</h1>
 		<p>India is progressing to make every city a SMART City. Are you a smart Citizen!!!
 Free yourself from old ties and adapt to smart ways. Join our hands and move towards Smart India.</p>
 	</div>	
@@ -96,12 +99,12 @@ Free yourself from old ties and adapt to smart ways. Join our hands and move tow
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-				<h2>Our Services</h2>
+				<h1>Our Services</h1>
 				<p>We care about our customer needs and we care for mother nature. </p>
 			</div>
 			
 			<div class="col-md-4 text-center item-block">
-				<%= image_tag "icon-car2.png",class: "img-responsive custom-img-center" %>
+				<%= image_tag "icon-car2.png",class: "img-responsive custom-img-center", alt: 'Spa911Carwash - Silver Spa' %>
 				<h3> Silver Spa </h3>
 				<blockquote>
 					<p>&ldquo; Eco-friendly exterior body wash, Interior dashboard clean, Tyre dressing, Windshield cleaning, and more! &rdquo;</p>
@@ -110,7 +113,7 @@ Free yourself from old ties and adapt to smart ways. Join our hands and move tow
 				<%= link_to "Book", "#{services_path()}#nav-services", class: "btn btn-primary btn-lg" %>
 			</div>
 			<div class="col-md-4 text-center item-block">
-				<%= image_tag "icon-car3.png",class: "img-responsive custom-img-center" %>
+				<%= image_tag "icon-car3.png",class: "img-responsive custom-img-center", alt: 'Spa911Carwash - Gold Spa' %>
 				<h3> Gold Spa </h3>
 				<blockquote>
 					<p>&ldquo; Includes Silver Spa, Exterior polish/Waxing, Carpet vacuuming, Dashboard polishing, and more! &rdquo;</p>
@@ -119,7 +122,7 @@ Free yourself from old ties and adapt to smart ways. Join our hands and move tow
 				<%= link_to "Book", "#{services_path()}#nav-services", class: "btn btn-primary btn-lg" %>
 			</div>
 			<div class="col-md-4 text-center item-block">
-				<%= image_tag "icon-car4.jpg",class: "img-responsive custom-img-center" %>
+				<%= image_tag "icon-car4.jpg",class: "img-responsive custom-img-center", alt: 'Spa911Carwash - Platinum Spa' %>
 				<h3> Platinum Spa </h3>
 				<blockquote>
 					<p>&ldquo; Includes Gold Spa, Minor scratch removal from exterior,Cleaning of Hinges and Side Doors, Stain Removal, and more!&rdquo;</p>

@@ -1,8 +1,8 @@
 <header id="fh5co-header" role="banner" <%= ['bookings','packages'].include?(params[:controller]) && params[:action] == 'show' ? 'class= custom-header-background' : ''%>>
 	<div class="container">
 		<div class="header-inner">
-			<h1> <%= link_to "Spa911<span>.</span>".html_safe, root_path %> </h1>
-			<nav role="navigation">
+			<%= link_to "Spa911<span>.</span>".html_safe, root_path, class: 'logo-spa911' %> 
+			<nav>
 				<ul>
 					<li <%= make_active_to('home') %>><%= link_to "Home", root_path %></li>
 					<li <%= make_active_to('aboutus')%>><%= link_to "About", about_us_path %></li>

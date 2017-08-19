@@ -2,3 +2,9 @@
 	margin-bottom: 5%;
   margin-left: 35%;
 }
+
+.logo-spa911:link, logo-spa911:hover,logo-spa911:visited {
+	color: #fafdfa !important;
+	transition: 0.5s;
+	font-size: 40px;
+}
