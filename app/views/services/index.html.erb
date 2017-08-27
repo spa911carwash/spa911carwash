@@ -46,9 +46,9 @@
 					<li>Side and Vent Glass Cleaning  </li>
 					
 				</ul>
-				<%= link_to "Hatchback ₹249", "#{new_service_booking_path('silver-spa-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-				<%= link_to "Sedan ₹299", "#{new_service_booking_path('silver-spa-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-				<%= link_to "SUV ₹349", "#{new_service_booking_path('silver-spa-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+				<%= link_to "Hatchback ₹#{@services['silver-spa-hatchback'].first.price}", "#{new_service_booking_path('silver-spa-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "Sedan ₹#{@services['silver-spa-sedan'].first.price}", "#{new_service_booking_path('silver-spa-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "SUV ₹#{@services['silver-spa-suv'].first.price}", "#{new_service_booking_path('silver-spa-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
 			</div>
 
 			<div class="col-md-6 text-left custom-margin-0 item-block animate-box">
@@ -70,9 +70,9 @@
 						<li> Complete Body Paint Protection by a Polymer Based Sealant </li>
 						
 					</ul>
-					<%= link_to "Hatchback ₹599", "#{new_service_booking_path('gold-spa-exterior-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-					<%= link_to "Sedan ₹699", "#{new_service_booking_path('gold-spa-exterior-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-					<%= link_to "SUV ₹899", "#{new_service_booking_path('gold-spa-exterior-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+					<%= link_to "Hatchback ₹#{@services['gold-spa-exterior-hatchback'].first.price}", "#{new_service_booking_path('gold-spa-exterior-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+					<%= link_to "Sedan ₹#{@services['gold-spa-exterior-sedan'].first.price}", "#{new_service_booking_path('gold-spa-exterior-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+					<%= link_to "SUV ₹#{@services['gold-spa-exterior-suv'].first.price}", "#{new_service_booking_path('gold-spa-exterior-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
 				</div>
 				<div class="col-md-5-9">
 					<h4 class="text-center">Interior</h4>
@@ -93,9 +93,9 @@
 						
 						
 					</ul>
-					<%= link_to "Hatchback ₹599", "#{new_service_booking_path('gold-spa-interior-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-					<%= link_to "Sedan ₹699", "#{new_service_booking_path('gold-spa-interior-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-					<%= link_to "SUV ₹899", "#{new_service_booking_path('gold-spa-interior-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+					<%= link_to "Hatchback ₹#{@services['gold-spa-interior-hatchback'].first.price}", "#{new_service_booking_path('gold-spa-interior-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+					<%= link_to "Sedan ₹#{@services['gold-spa-interior-sedan'].first.price}", "#{new_service_booking_path('gold-spa-interior-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+					<%= link_to "SUV ₹#{@services['gold-spa-interior-suv'].first.price}", "#{new_service_booking_path('gold-spa-interior-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
 				</div>
 			</div>
 
@@ -124,9 +124,9 @@
 					<li> All Vinyl, Plastic Rubber Deep Cleaned and Protected Including Dash and Doors. </li>
 					
 				</ul>
-				<%= link_to "Hatchback ₹999", "#{new_service_booking_path('platinum-spa-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-				<%= link_to "Sedan ₹1249", "#{new_service_booking_path('platinum-spa-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
-				<%= link_to "SUV ₹1599", "#{new_service_booking_path('platinum-spa-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
+				<%= link_to "Hatchback ₹#{@services['platinum-spa-hatchback'].first.price}", "#{new_service_booking_path('platinum-spa-hatchback')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "Sedan ₹#{@services['platinum-spa-sedan'].first.price}", "#{new_service_booking_path('platinum-spa-sedan')}#booking-form",class: "btn btn-primary with-arrow" %><br />
+				<%= link_to "SUV ₹#{@services['platinum-spa-suv'].first.price}", "#{new_service_booking_path('platinum-spa-suv')}#booking-form",class: "btn btn-primary with-arrow" %>
 			</div>
 
 		</div>
