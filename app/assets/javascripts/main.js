@@ -25,12 +25,16 @@
 		}
 	};
 
+	var getHeight = function() {
+		$(window).height()
+	}
+
 	var fullHeight = function() {
 
 		if ( !isMobile.any() ) {
-			$('.js-fullheight').css('height', $(window).height());
+			$('.js-fullheight').css('height', getHeight);
 			$(window).resize(function(){
-				$('.js-fullheight').css('height', $(window).height());
+				$('.js-fullheight').css('height', getHeight);
 			});
 		}
 
@@ -57,9 +61,9 @@
 
 	  	});
 
-	  	$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
+	  	$('#fh5co-hero .flexslider .slides > li').css('height', getHeight);	
 	  	$(window).resize(function(){
-	  		$('#fh5co-hero .flexslider .slides > li').css('height', $(window).height());	
+	  		$('#fh5co-hero .flexslider .slides > li').css('height', getHeight);	
 	  	});
 
 	};
